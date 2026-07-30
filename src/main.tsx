@@ -20,7 +20,6 @@ import Registration from './pages/Registration.tsx';
 import TermsOfService from './pages/TermsOfService.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import NotFound from './pages/NotFound.tsx';
-import EnrollModal from './components/EnrollModal.tsx';
 import { applySEO } from './utils/seo.ts';
 import { injectGlobalSchemas, injectPageSchema } from './utils/structuredData.ts';
 import './index.css';
@@ -29,7 +28,6 @@ injectGlobalSchemas();
 
 function Root() {
   const [path, setPath] = useState(window.location.pathname);
-  const [enrollOpen, setEnrollOpen] = useState(window.location.pathname === '/register');
 
   useEffect(() => {
     applySEO(path);
@@ -43,12 +41,6 @@ function Root() {
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, []);
-
-  useEffect(() => {
-    const open = () => setEnrollOpen(true);
-    window.addEventListener('open-enroll-modal', open);
-    return () => window.removeEventListener('open-enroll-modal', open);
   }, []);
 
   if (
@@ -84,7 +76,6 @@ function Root() {
   return (
     <>
       {page}
-      {enrollOpen && <EnrollModal onClose={() => setEnrollOpen(false)} />}
     </>
   );
 }
