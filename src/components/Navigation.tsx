@@ -1,5 +1,5 @@
 import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { navigate } from '../utils/navigate';
 import { openEnrollModal } from '../utils/enrollModal';
 
@@ -24,34 +24,8 @@ export default function Navigation() {
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
   const [mobileParentsOpen, setMobileParentsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [announcementVisible, setAnnouncementVisible] = useState(
-    () => sessionStorage.getItem('announcement-dismissed') !== '1'
-  );
-  const [activeMsg, setActiveMsg] = useState(0);
-  const [msgVisible, setMsgVisible] = useState(true);
   const stickyWrapperRef = useRef<HTMLDivElement>(null);
   const [drawerTop, setDrawerTop] = useState(83);
-
-  const announcements = [
-    {
-      text: '🎉 Welcome to the new website of Camp Gan Izzy Atlantic County!',
-      href: null,
-      external: false,
-    },
-  ];
-
-  const dismissAnnouncement = () => {
-    setAnnouncementVisible(false);
-    sessionStorage.setItem('announcement-dismissed', '1');
-  };
-
-  const cycleMessage = useCallback(() => {
-    setMsgVisible(false);
-    setTimeout(() => {
-      setActiveMsg((prev) => (prev + 1) % announcements.length);
-      setMsgVisible(true);
-    }, 400);
-  }, [announcements.length]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -72,13 +46,7 @@ export default function Navigation() {
       window.removeEventListener('scroll', updateDrawerTop);
       window.removeEventListener('resize', updateDrawerTop);
     };
-  }, [announcementVisible]);
-
-  useEffect(() => {
-    if (!announcementVisible) return;
-    const id = setInterval(cycleMessage, 4000);
-    return () => clearInterval(id);
-  }, [announcementVisible, cycleMessage]);
+  }, []);
 
   const closeMobile = () => {
     setMobileOpen(false);
@@ -94,39 +62,6 @@ export default function Navigation() {
 
   return (
     <div ref={stickyWrapperRef} className="sticky top-0 z-50">
-      {announcementVisible && (
-        <div className="bg-white text-primary border-b border-primary/20">
-          <div className="max-w-5xl mx-auto px-4 py-2 flex items-center gap-2 h-[52px] sm:min-h-[40px] sm:h-auto">
-            <span className="flex-1" />
-            <span
-              className="font-body font-extrabold text-xs sm:text-sm text-center leading-snug transition-opacity duration-400 line-clamp-2 sm:line-clamp-none"
-              style={{ opacity: msgVisible ? 1 : 0, transition: 'opacity 0.4s ease' }}
-            >
-              {announcements[activeMsg].href ? (
-                <a
-                  href={announcements[activeMsg].href!}
-                  target={announcements[activeMsg].external ? '_blank' : undefined}
-                  rel={announcements[activeMsg].external ? 'noopener noreferrer' : undefined}
-                  className="hover:underline"
-                >
-                  {announcements[activeMsg].text}
-                </a>
-              ) : (
-                announcements[activeMsg].text
-              )}
-            </span>
-            <span className="flex-1 flex justify-end">
-              <button
-                onClick={dismissAnnouncement}
-                aria-label="Dismiss announcement"
-                className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full hover:bg-primary/10 active:bg-primary/20 transition-colors duration-150"
-              >
-                <X size={14} strokeWidth={2.5} />
-              </button>
-            </span>
-          </div>
-        </div>
-      )}
       <nav
         aria-label="Main navigation"
         className={`transition-all duration-300 ${
