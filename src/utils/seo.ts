@@ -77,7 +77,7 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
   },
   '/contact': {
     title: 'Contact Camp Gan Izzy AC | Ventnor City, NJ | 609-201-3521',
-    description: 'Get in touch with Camp Gan Izzy AC. Visit us at 6605 Atlantic Ave, Ventnor City, NJ 08406, call 609-201-3521, or email mushky@chabadac.com.',
+    description: 'Get in touch with Camp Gan Izzy AC. Visit us at 21 S Troy Ave, Ventnor City, NJ 08406, call 609-201-3521, or email mushky@chabadac.com.',
     canonical: `${BASE_URL}/contact`,
     ogImage: OG_IMAGE,
   },

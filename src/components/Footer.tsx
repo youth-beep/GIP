@@ -57,7 +57,7 @@ export default function Footer() {
                 </a>
                 <div className="flex items-start gap-2.5">
                   <MapPin size={13} className="text-primary/70 flex-shrink-0 mt-0.5" />
-                  <span className="font-body text-sm text-gray-400 leading-snug">6605 Atlantic Ave,<br />Ventnor City, NJ 08406</span>
+                  <span className="font-body text-sm text-gray-400 leading-snug">21 S Troy Ave,<br />Ventnor City, NJ 08406</span>
                 </div>
               </div>
 

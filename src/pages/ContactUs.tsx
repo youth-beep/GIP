@@ -80,7 +80,7 @@ function ContactInfo() {
     {
       icon: MapPin,
       label: 'Location',
-      value: '6605 Atlantic Ave',
+      value: '21 S Troy Ave',
       sub: 'Ventnor City, NJ 08406',
       accent: 'bg-secondary-pink/10',
       iconColor: 'text-secondary-pink',

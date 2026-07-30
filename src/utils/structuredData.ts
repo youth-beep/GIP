@@ -13,7 +13,7 @@ export const organizationSchema = {
   email: 'mushky@chabadac.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '6605 Atlantic Ave',
+    streetAddress: '21 S Troy Ave',
     addressLocality: 'Ventnor City',
     addressRegion: 'NJ',
     postalCode: '08406',
@@ -42,7 +42,7 @@ export const localBusinessSchema = {
   email: 'mushky@chabadac.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '6605 Atlantic Ave',
+    streetAddress: '21 S Troy Ave',
     addressLocality: 'Ventnor City',
     addressRegion: 'NJ',
     postalCode: '08406',
@@ -83,7 +83,7 @@ export const campEventSchema = {
     name: 'Camp Gan Izzy AC Campus',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '6605 Atlantic Ave',
+      streetAddress: '21 S Troy Ave',
       addressLocality: 'Ventnor City',
       addressRegion: 'NJ',
       postalCode: '08406',
@@ -131,7 +131,7 @@ export const faqSchema = {
       name: 'Where is Camp Gan Izzy AC located?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Camp Gan Izzy AC is located at 6605 Atlantic Ave, Ventnor City, NJ 08406, close to Atlantic City.',
+        text: 'Camp Gan Izzy AC is located at 21 S Troy Ave, Ventnor City, NJ 08406, close to Atlantic City.',
       },
     },
     {
@@ -250,7 +250,7 @@ export function injectPageSchema(path: string) {
         name: 'Camp Gan Izzy AC Campus',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: '6605 Atlantic Ave',
+          streetAddress: '21 S Troy Ave',
           addressLocality: 'Ventnor City',
           addressRegion: 'NJ',
           postalCode: '08406',
