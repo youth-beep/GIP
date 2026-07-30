@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, BookOpen, Camera, Heart, ArrowRight, ExternalLink, Clock } from 'lucide-react';
+import { BookOpen, Camera, Heart, ArrowRight, ExternalLink, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
@@ -97,39 +97,21 @@ interface Resource {
 
 const resources: Resource[] = [
   {
-    icon: Calendar,
-    title: 'Camp Calendars 2026',
-    description:
-      'View and download our daily schedules, trip days, and special dress-up themes.',
-    buttonLabel: 'View Calendar',
-    href: '/calendar',
-    external: false,
-    comingSoon: false,
-    accent: 'bg-secondary-blue/10',
-    iconBg: 'bg-secondary-blue/15',
-    iconColor: 'text-secondary-blue',
-    ring: 'ring-secondary-blue/20',
-    btnRing: 'ring-secondary-blue/30',
-    btnText: 'text-secondary-blue',
-    btnHover: 'hover:bg-secondary-blue/10',
-    dot: 'bg-secondary-blue',
-  },
-  {
     icon: BookOpen,
-    title: 'Parents Handbook',
+    title: 'Preschool Welcome Packet',
     description:
-      'All the important details in one place: packing lists, camp policies, drop-off/pick-up procedures, and more.',
-    buttonLabel: 'Download Handbook',
-    href: 'https://drive.google.com/file/d/1IZMko00A-MfhhWuOV2dZh6gy7igurIB-/view?usp=sharing',
+      'Everything preschool families need to know before the first day — routines, what to bring, and how to prepare your little one for Gan Izzy.',
+    buttonLabel: 'View Packet',
+    href: 'https://drive.google.com/file/d/1saydFni2WAAskhCZ02SqnOEz6NNU29Gs/view?usp=sharing',
     external: true,
-    accent: 'bg-secondary-green/10',
-    iconBg: 'bg-secondary-green/15',
-    iconColor: 'text-secondary-green',
-    ring: 'ring-secondary-green/20',
-    btnRing: 'ring-secondary-green/30',
-    btnText: 'text-secondary-green',
-    btnHover: 'hover:bg-secondary-green/10',
-    dot: 'bg-secondary-green',
+    accent: 'bg-secondary-yellow/10',
+    iconBg: 'bg-secondary-yellow/20',
+    iconColor: 'text-amber-600',
+    ring: 'ring-secondary-yellow/30',
+    btnRing: 'ring-amber-400/40',
+    btnText: 'text-amber-700',
+    btnHover: 'hover:bg-secondary-yellow/20',
+    dot: 'bg-secondary-yellow',
   },
   {
     icon: Camera,
@@ -146,23 +128,6 @@ const resources: Resource[] = [
     btnText: 'text-secondary-pink',
     btnHover: 'hover:bg-secondary-pink/10',
     dot: 'bg-secondary-pink',
-  },
-  {
-    icon: BookOpen,
-    title: 'Preschool Welcome Packet',
-    description:
-      'Everything preschool families need to know before the first day — routines, what to bring, and how to prepare your little one for Gan Izzy.',
-    buttonLabel: 'View Packet',
-    href: '/parents',
-    external: false,
-    accent: 'bg-secondary-yellow/10',
-    iconBg: 'bg-secondary-yellow/20',
-    iconColor: 'text-amber-600',
-    ring: 'ring-secondary-yellow/30',
-    btnRing: 'ring-amber-400/40',
-    btnText: 'text-amber-700',
-    btnHover: 'hover:bg-secondary-yellow/20',
-    dot: 'bg-secondary-yellow',
   },
   {
     icon: Heart,
