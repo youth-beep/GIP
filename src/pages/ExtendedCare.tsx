@@ -14,7 +14,7 @@ function ExtendedCareHero() {
   return (
     <section className="relative overflow-hidden min-h-[80vh] flex items-center px-4 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-28">
       <img
-        src="/extanded-care.webp"
+        src="/extended-care.webp"
         alt="Extended Care"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"

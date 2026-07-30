@@ -205,7 +205,7 @@ function PlanRowItem({ row }: { row: PlanRow }) {
         >
           {price}
         </span>
-        {!tbd && <span className="font-body text-xs font-normal text-gray-400">/mo</span>}
+        {!tbd && <span className="font-body text-xs font-normal text-gray-400">/yr</span>}
       </div>
     </div>
   );
@@ -297,7 +297,7 @@ function Pricing() {
             Flexible <span className="text-primary">Tuition Plans</span>
           </h2>
           <p className="font-body text-base sm:text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
-            Choose the schedule that fits your family — 2, 3, or 5 days a week with full-day and half-day options. All prices are monthly.
+            Choose the schedule that fits your family — 2, 3, or 5 days a week with full-day and half-day options. All prices are annual.
           </p>
         </div>
 

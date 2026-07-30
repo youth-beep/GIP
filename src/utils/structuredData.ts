@@ -9,7 +9,7 @@ export const organizationSchema = {
   logo: `${BASE_URL}/CGI_Logo.png`,
   image: `${BASE_URL}/camp-photo.jpg`,
   description: 'Camp Gan Izzy AC is the premier Jewish summer day camp for children ages 0–14+ in Ventnor City, NJ. Unforgettable fun, Jewish values, and lifelong memories.',
-  telephone: '+16098228500',
+  telephone: '+16092013521',
   email: 'mushky@chabadac.com',
   address: {
     '@type': 'PostalAddress',
@@ -38,7 +38,7 @@ export const localBusinessSchema = {
   logo: `${BASE_URL}/CGI_Logo.png`,
   image: `${BASE_URL}/camp-photo.jpg`,
   description: 'Jewish summer day camp for children ages 0–14+ in Ventnor City, NJ.',
-  telephone: '+16098228500',
+  telephone: '+16092013521',
   email: 'mushky@chabadac.com',
   address: {
     '@type': 'PostalAddress',
@@ -58,7 +58,7 @@ export const localBusinessSchema = {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '07:30',
-      closes: '18:00',
+      closes: '17:30',
     },
   ],
   priceRange: '$$',
@@ -265,7 +265,7 @@ export function injectPageSchema(path: string) {
   } else if (path === '/contact') {
     crumbs.push({ name: 'Contact Us', url: `${BASE}/contact` });
   } else if (path === '/dates-rates') {
-    crumbs.push({ name: 'Rates', url: `${BASE}/rates` });
+    crumbs.push({ name: 'Rates', url: `${BASE}/dates-rates` });
   } else if (path === '/register') {
     crumbs.push({ name: 'Register', url: `${BASE}/register` });
   } else if (path === '/parents') {

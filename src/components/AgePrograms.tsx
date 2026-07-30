@@ -5,7 +5,7 @@ const programs = [
   {
     name: 'Infants',
     ages: 'Ages 0–16 Months',
-    href: '/programs/infants',
+    href: '/programs/preschool',
     borderColor: 'border-secondary-pink',
     iconBg: 'bg-secondary-pink',
     icon: Baby,
@@ -33,7 +33,7 @@ const programs = [
     iconColor: 'text-gray-800',
     icon: Sun,
     description: 'Before and after camp care options',
-    image: '/extanded-care.webp',
+    image: '/extended-care.webp',
     bgHex: '#fffbeb',
   },
 ];

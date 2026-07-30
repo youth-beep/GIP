@@ -29,7 +29,7 @@ const badges = [
     softBg: 'bg-secondary-green/5',
     lightCircle: 'bg-secondary-green/10',
     ringColor: 'ring-secondary-green/15',
-    image: '/vatted-team.webp',
+    image: '/vetted-team.webp',
   },
   {
     icon: Award,
@@ -40,7 +40,7 @@ const badges = [
     softBg: 'bg-secondary-yellow/5',
     lightCircle: 'bg-secondary-yellow/10',
     ringColor: 'ring-secondary-yellow/15',
-    image: '/extanded-care.webp',
+    image: '/extended-care.webp',
   },
 ];
 
